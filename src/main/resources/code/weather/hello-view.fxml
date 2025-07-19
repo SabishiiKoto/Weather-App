@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.weather.MainController">
    <top>
       <AnchorPane prefHeight="109.0" prefWidth="522.0" BorderPane.alignment="CENTER">
@@ -34,8 +33,11 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <ImageView fx:id="imageForSearching" fitHeight="51.0" fitWidth="71.0" layoutX="428.0" layoutY="45.0" onDragDetected="#searchImageTrigger" pickOnBounds="true" preserveRatio="true" />
-            <TextField fx:id="textFieldForArea" layoutX="23.0" layoutY="44.0" prefHeight="52.0" prefWidth="387.0" />
+            <ImageView fx:id="imageForSearching" fitHeight="51.0" fitWidth="71.0" layoutX="451.0" layoutY="45.0" onDragDetected="#searchImageTrigger" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="textFieldForArea" layoutX="23.0" layoutY="44.0" prefHeight="52.0" prefWidth="414.0" promptText="Calgary">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
          </children>
       </AnchorPane>
    </top>
@@ -55,22 +57,22 @@
             </Label>
             <ImageView fx:id="imageForHumidity" fitHeight="75.0" fitWidth="94.0" layoutX="40.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="imageForWindSpeed" fitHeight="75.0" fitWidth="94.0" layoutX="270.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true" />
-            <Label layoutX="153.0" layoutY="357.0" text="Humidity" textFill="#4e4747">
+            <Label layoutX="131.0" layoutY="357.0" text="Humidity" textFill="#4e4747">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="labelForHumidity" layoutX="153.0" layoutY="384.0" prefHeight="27.0" prefWidth="76.0" textFill="#4e4747">
+            <Label fx:id="labelForHumidity" layoutX="131.0" layoutY="384.0" prefHeight="27.0" prefWidth="76.0" textFill="#4e4747">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="382.0" layoutY="357.0" text="Wind Speed" textFill="#4e4747">
+            <Label layoutX="361.0" layoutY="357.0" text="Wind Speed" textFill="#4e4747">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="labelForWindSpeed" layoutX="382.0" layoutY="384.0" prefHeight="27.0" prefWidth="101.0" textFill="#4e4747">
+            <Label fx:id="labelForWindSpeed" layoutX="361.0" layoutY="384.0" prefHeight="27.0" prefWidth="101.0" textFill="#4e4747">
                <font>
                   <Font size="18.0" />
                </font>
