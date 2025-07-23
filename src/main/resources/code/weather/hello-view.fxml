@@ -4,17 +4,106 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.weather.MainController">
-   <top>
-      <AnchorPane prefHeight="109.0" prefWidth="522.0" BorderPane.alignment="CENTER">
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <ScrollPane prefHeight="431.0" prefWidth="197.0" BorderPane.alignment="CENTER">
+         <content>
+            <Pane prefHeight="437.0" prefWidth="186.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="5.0" text="Label" />
+                  <Label layoutX="14.0" layoutY="44.0" text="Label" />
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </left>
+   <right>
+      <ScrollPane prefHeight="431.0" prefWidth="198.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <Pane prefHeight="431.0" prefWidth="366.0" BorderPane.alignment="CENTER">
          <children>
-            <MenuBar layoutY="2.0" prefHeight="26.0" prefWidth="521.0">
+            <ImageView fitHeight="167.0" fitWidth="182.0" layoutX="75.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" />
+            <Label alignment="CENTER" layoutX="83.0" layoutY="7.0" prefHeight="25.0" prefWidth="167.0" text="Date">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="99.0" layoutY="237.0" prefHeight="31.0" prefWidth="136.0" text="Temperature">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="62.0" fitWidth="67.0" layoutX="6.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="62.0" fitWidth="67.0" layoutX="166.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="73.0" layoutY="363.0" text="Humidity">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="234.0" layoutY="363.0" text="Wind Speed">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="73.0" layoutY="388.0" text="Label">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="234.0" layoutY="388.0" text="Label">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="107.0" layoutY="307.0" prefHeight="27.0" prefWidth="117.0" text="Sky status">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="61.0" layoutY="277.0" prefHeight="27.0" prefWidth="209.0" text="Max temp/Min temp">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="82.0" layoutY="37.0" prefHeight="25.0" prefWidth="167.0" text="Location">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+      <Pane prefHeight="22.0" prefWidth="699.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="69.0" layoutY="3.0" prefHeight="17.0" prefWidth="589.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="73.0" prefWidth="726.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="46.0" fitWidth="71.0" layoutX="655.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField layoutX="14.0" layoutY="33.0" prefHeight="36.0" prefWidth="638.0" promptText="City">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="726.0">
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
@@ -33,51 +122,7 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <ImageView fx:id="imageForSearching" fitHeight="51.0" fitWidth="71.0" layoutX="451.0" layoutY="45.0" onDragDetected="#searchImageTrigger" pickOnBounds="true" preserveRatio="true" />
-            <TextField fx:id="textFieldForArea" layoutX="23.0" layoutY="44.0" prefHeight="52.0" prefWidth="414.0" promptText="Calgary">
-               <font>
-                  <Font size="18.0" />
-               </font></TextField>
          </children>
       </AnchorPane>
    </top>
-   <center>
-      <AnchorPane prefHeight="471.0" prefWidth="522.0" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fx:id="imageForWeather" fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="labelForDate" alignment="CENTER" layoutX="153.0" layoutY="28.0" prefHeight="38.0" prefWidth="215.0" textFill="#4e4747">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Label>
-            <Label fx:id="labelForTemperature" alignment="CENTER" layoutX="171.0" layoutY="237.0" prefHeight="70.0" prefWidth="178.0" textFill="#4e4747">
-               <font>
-                  <Font name="System Bold" size="48.0" />
-               </font>
-            </Label>
-            <ImageView fx:id="imageForHumidity" fitHeight="75.0" fitWidth="94.0" layoutX="40.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="imageForWindSpeed" fitHeight="75.0" fitWidth="94.0" layoutX="270.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true" />
-            <Label layoutX="131.0" layoutY="357.0" text="Humidity" textFill="#4e4747">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label fx:id="labelForHumidity" layoutX="131.0" layoutY="384.0" prefHeight="27.0" prefWidth="76.0" textFill="#4e4747">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="361.0" layoutY="357.0" text="Wind Speed" textFill="#4e4747">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label fx:id="labelForWindSpeed" layoutX="361.0" layoutY="384.0" prefHeight="27.0" prefWidth="101.0" textFill="#4e4747">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-   </center>
 </BorderPane>
